@@ -1,0 +1,36 @@
+/* #weather::before{
+    content: "<";
+    color: red;
+}
+
+#weather::after{
+    content: ">";
+    color:blue;
+} */
+
+/* p{
+    text-indent: 2em;
+    line-height: 2;
+    font-size: 2em;
+}
+
+p.red{
+    color: red;
+} */
+
+/* .red li{
+    color: red;
+} */
+
+
+/* .red>ul{
+    color: red;
+} */
+
+/* div>ul>li.special{
+    color: red;
+} */
+
+.special,p{
+    color:green;
+}

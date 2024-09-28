@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function throttle(fn, delay){
+            var valid = true;
+
+            return function(){
+                if(!valid){
+                    return false;
+                }
+                valid = false;
+                setTimeout(function(){
+                    fn();
+                    valid = true;
+
+                }, delay);
+            }
+        }
+
+
+        function scrollHandle() {
+            var scrollTop = document.documentElement.scrollTop;
+            console.log(scrollTop);
+        }
+        //滚动事件
+        window.onscroll = throttle(scrollHandle, 2000);
+    </script>
+    <style>
+
+        h2{
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Asperiores id totam aperiam laboriosam!</h2>
+    <h2>Sint id amet officia numquam?</h2>
+    <h2>Dolor sequi in beatae nisi!</h2>
+    <h2>Eveniet nostrum quos accusamus! Ad.</h2>
+    <h2>Eius id accusantium aliquam maxime?</h2>
+    <h2>Laboriosam ratione inventore sequi corrupti!</h2>
+    <h2>Aliquam quasi ab mollitia fuga.</h2>
+    <h2>Tempora cum quos error officia?</h2>
+    <h2>Eligendi natus accusantium laborum voluptas!</h2>
+</body>
+
+</html>
